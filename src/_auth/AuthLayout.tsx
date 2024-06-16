@@ -6,14 +6,14 @@ const AuthLayout = () => {
   return (
     <>
       {isAuthenticated ? (
-      <Navigate to='/' />
+        <Navigate to='/' />
       ) : (
-      <>
-        <section className="flex flex-1 justify-center items-center flex-col py-10">
-          <Outlet />
-        </section>
-        <img src={sideImg} alt="logo" className="hidden xl:block w-1/2 object-cover h-screen bg-no-repeat"/>
-      </>
+        <>
+          <section className="flex flex-1 justify-center items-center flex-col py-10">
+            <Outlet />
+          </section>
+          <img src={sideImg} alt="logo" className="xl:block w-1/2 object-cover h-screen bg-no-repeat" loading="lazy" />
+        </>
       )}
     </>
   )
